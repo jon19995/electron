@@ -1,0 +1,20 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "Link shortener project template",
+  "scripts": {
+    "start": "concurrently --kill-others \"npm run start:server\" \"npm run start:client\"",
+    "start:server": "nodemon server/src/server.js",
+    "start:client": "cd ./client && node .electron-vue/dev-runner.js"
+  },
+  "keywords": [],
+  "author": "SHRI",
+  "license": "ISC",
+  "dependencies": {
+    "nodejs": "file:server"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.1",
+    "nodemon": "^2.0.22"
+  }
+}
